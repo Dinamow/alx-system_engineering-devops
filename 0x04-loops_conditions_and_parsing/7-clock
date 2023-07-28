@@ -2,7 +2,7 @@
 #sayin the time
 
 i=0
-while [ $i -le 10 ]
+while [ $i -le 12 ]
 do
 	echo "Hour: $i"
 	j=1

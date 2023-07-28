@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#sayin "best school" 10 times
+#sayin "best school" 10 times with some other things 
 
 i=1
 while [ $i -le 10 ]

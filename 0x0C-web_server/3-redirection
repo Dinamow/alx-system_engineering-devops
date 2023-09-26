@@ -2,8 +2,7 @@
 #Redirection
 sudo apt-get -y install nginx
 
-sudo echo "Hello World!" > /var/www/html/index.html
-chmod 444 /etc/nginx/sites-available/default
+chmod 777 /etc/nginx/sites-available/default
 sudo echo "server {
     listen 80;
     listen [::]:80;
@@ -20,5 +19,5 @@ sudo echo "server {
     location /redirect_me/ {
         return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
     }
-}" > /etc/nginx/sites-available/default
+}" > /etc/nginx/sites-available/index.html
 service nginx start

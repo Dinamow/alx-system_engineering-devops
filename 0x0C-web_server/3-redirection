@@ -2,6 +2,7 @@
 #Redirection
 sudo apt-get -y install nginx
 
+echo "Hello World!" > /var/www/html/index.html
 echo "server {
     listen 80;
     listen [::]:80;

@@ -3,7 +3,7 @@
 
 sudo apt-get update
 sudo apt-get -y install nginx
-sed -i 's/listen 80 default_server;/listen 80;/' /etc/nginx/sites-available/default
+sudo sed -i 's/listen 80 default_server;/listen 80;/' /etc/nginx/sites-available/default
 sudo service nginx restart
-echo "Hello World!" > /var/www/html/index.html
+sudo echo "Hello World!" > /var/www/html/index.html
 sudo service nginx restart

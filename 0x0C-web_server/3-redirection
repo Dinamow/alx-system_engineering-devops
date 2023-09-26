@@ -2,7 +2,8 @@
 #Redirection
 sudo apt-get -y install nginx
 
-chmod 777 /etc/nginx/sites-available/default
+sudo echo "Hello World!" > /var/www/html/index.html
+chmod 444 /etc/nginx/sites-available/default
 sudo echo "server {
     listen 80;
     listen [::]:80;

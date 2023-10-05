@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # script to report information about server domains
-# shellcheck disable=SC2086
+
 check_domain() {
 	SUBDOMAINS='www lb-01 web-01 web-02'
 
 	if [ -z "$1" ]; then
 		exit
 	fi
-	# no sub domain specified, do all
+
 	if [ -z "$2" ]; then
 		echo "$SUBDOMAINS" | awk -v domain="$1"\
 		'BEGIN { RS=" " }
@@ -25,4 +25,5 @@ check_domain() {
 		print "The subdomain " DOMS[1] " is a " $4 " record and points to " $5}'
 	fi
 }
+
 check_domain "$1" "$2"

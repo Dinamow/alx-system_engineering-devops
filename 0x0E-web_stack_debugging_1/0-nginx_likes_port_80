@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # fix Nginx likes port 80
 sudo apt-get update
-sudo apt-get -y install nginx ufw
+sudo apt-get -y install nginx
 sudo echo "<!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +27,4 @@ Commercial support is available at
 <p><em>Thank you for using nginx.</em></p>
 </body>
 </html>" | sudo tee /var/www/html/index.html
-sudo ufw allow http
-sudo ufw allow ssh
-sudo ufw enable -y
 sudo service nginx restart

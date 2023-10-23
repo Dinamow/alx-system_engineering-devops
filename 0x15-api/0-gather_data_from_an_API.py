@@ -13,11 +13,11 @@ if __name__ == "__main__":
     ureq = requests.get(USER).json()
     treq = requests.get(TODO).json()
     name = ureq['name']
+    tasks[0] = len(treq)
     for x in treq:
-        tasks[0] += 1
         if x['completed']:
             tasks[1] += 1
+            tasks.append(x['title'])
     print(f'Employee {name} is done with tasks({tasks[1]}/{tasks[0]}):')
-    for x in treq:
-        if x['completed']:
-            print(f"\t {x['title']}")
+    for x in range(2, len(tasks)):
+        print(f"\t {tasks[x]}")

@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     ureq = requests.get(USER).json()
     treq = requests.get(TODO).json()
-    name = ureq['name']
+    name = ureq['username']
     with open(f'{EMPID}.csv', 'w', newline='') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_NONNUMERIC)
         for x in treq:

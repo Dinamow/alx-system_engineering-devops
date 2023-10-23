@@ -18,6 +18,8 @@ if __name__ == "__main__":
     for x in treq:
         del x['userId']
         del x['id']
+        x['task'] = x.pop('title')
+        x['completed'] = x.pop('completed')
         x['username'] = ureq['username']
         ll.append(x)
     data[f"{EMPID}"] = ll

@@ -14,6 +14,7 @@ if __name__ == "__main__":
     treq = requests.get(TODO).json()
     name = ureq['name']
     with open(f'{EMPID}.csv', 'w', newline='') as file:
-        writer = csv.writer(file)
+        writer = csv.writer(file, quoting=csv.QUOTE_NONNUMERIC)
         for x in treq:
-            writer.writerow([EMPID, name, x['completed'], x['title']])
+            writer.writerow([str(EMPID), f"{name}",
+                            f"{x['completed']}", f"{x['title']}"])
